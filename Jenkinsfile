@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        
+
         stage('Clone Repo') {
             steps {
                 git branch: 'devops-pipeline-01', url: 'https://github.com/syedtehseen/tweet-trend-new.git'
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Maven Build') {
             steps {
-                sh 'mvn clean deploy'
+                sh '/opt/apache-maven-3.9.6/bin/mvn clean deploy'
             }
         }
         stage('SonarQube Analysis') {
