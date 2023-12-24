@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('SOnarQube Analysis') {
+        stage('SonarQube Analysis') {
             environment {
                 scannerHome = tool 'dops-sonar-scanner'
             }
