@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('dops-sonarcube-server') {
-                    sh "${scannerHome}/bin/sonar-scanner"
+                    sh "${scannerHome}/bin/sonar-scanner -X"
                 }
             }
         }
